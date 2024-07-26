@@ -15,7 +15,7 @@ document.addEventListener('click', element => {
         dead.textContent = 0;
         lost.textContent = 0;
     } else if(lost.textContent == 5) {
-        alert('Проигрыш :-пше(')
+        alert('Проигрыш :-(')
         dead.textContent = 0;
         lost.textContent = 0;
     }
