@@ -2,11 +2,11 @@ let startTimer = document.getElementById('timer');
 const intervalId = setInterval(timer, 1000);
 
 function timer() {
-    let timerVal = startTimer.innerHTML - 1;
+    let timerVal = startTimer.textContent - 1;
     if(timerVal < 10) {
-        startTimer.innerHTML = timerVal
+        startTimer.textContent = timerVal
     } else {
-        startTimer.innerHTML = timerVal;
+        startTimer.textContent = timerVal
     }
     if(timerVal === 0) {
         clearInterval(intervalId);
