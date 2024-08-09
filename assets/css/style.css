@@ -61,6 +61,7 @@ input:focus {
   margin-right: auto;
   padding-top: 20px;
   background-color: #f6f8f9;
+  display: flex;
 }
 
 .card {
