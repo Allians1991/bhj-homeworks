@@ -14,15 +14,13 @@ function randomText(rotator) {
     }
     const colorText = rotator[idElement].getAttribute('data-color');
 
-    interval = +rotator[idElement].getAttribute('data-speed'); //???
+    interval = +rotator[idElement].getAttribute('data-speed');
     rotator[idElement].style.color = colorText;
     rotator[idElement].classList.add('rotator__case_active');
 }
 
-setInterval(() => {
+const qwe = setInterval(() => {
     randomText(rotatorCase);
 }, interval);
-
-// Не разобрался как прокинуть полученное значение мсек из data-speed
 
 
