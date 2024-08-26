@@ -37,19 +37,11 @@ products.forEach(product => {
     })
 
     function addToCart() {
-        const cartProduct = document.createElement('div');
-        const productImage = document.createElement('img');
-        const productCount = document.createElement('div');
-
-        cartProduct.classList.add('cart__product');
-        cartProduct.setAttribute('data-id', product.getAttribute('data-id'));
-        productImage.classList.add('cart__product-image');
-        productImage.src = product.querySelector('.product__image').src;
-        productCount.classList.add('cart__product-count');
-        productCount.innerText = productValue.innerText;
-        cartProduct.appendChild(productImage);
-        cartProduct.appendChild(productCount);
-        cart.appendChild(cartProduct);
+        cart.insertAdjacentHTML('beforeend', `
+            <div class="cart__product" data-id="${product.getAttribute('data-id')}">
+                <img class="cart__product-image" src="${product.querySelector('.product__image').src}">
+                <div class="cart__product-count">${productValue.innerText}</div>
+            </div>`)
     }
 });
 
