@@ -42,6 +42,6 @@ products.forEach(product => {
                 <img class="cart__product-image" src="${product.querySelector('.product__image').src}">
                 <div class="cart__product-count">${productValue.innerText}</div>
             </div>`)
-    }
+    }``
 });
 
