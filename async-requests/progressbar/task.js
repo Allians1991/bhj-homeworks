@@ -1,8 +1,20 @@
-const pollTitle = document.getElementById('poll__title');
+const form = document.getElementById('form');
 const progress = document.getElementById('progress');
-const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/poll');
-xhr.send();
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData(form);
+    xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/upload');
+    xhr.send(formData);
+    xhr.upload.addEventListener('progress', e => progress.value = e.loaded / e.total);
+})
+
+
+
+
+
 
 
 

@@ -23,7 +23,7 @@ function addTask(e) {
     taskForm.reset();
 }
 
-document.addEventListener('click', e => {
+taskList.addEventListener('click', e => {
     if(e.target.classList.contains('task__remove')) {
         e.target.closest('.task').remove();
     }
